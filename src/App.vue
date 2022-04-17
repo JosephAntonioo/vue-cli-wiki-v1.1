@@ -1,28 +1,65 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ListaInstalar id = "lista-instalar"></ListaInstalar>
+    <ListaComponents id = "lista-components"></ListaComponents>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ListaComponents from './ListaComponents.vue';
+import ListaInstalar from './ListaInstalar.vue';
+window.Vue = require('vue');
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    ListaComponents,
+    ListaInstalar
+}
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* border-width: medium;
+  border-style: solid;
+  border-color: #00f; */
+}
+#lista-components {
+  border-width: medium;
+  border-style: solid;
+  border-color: #00f;
+
+  width:95%;
+  height:auto;
+  border:2px solid black;
+  padding:10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
+}
+
+#lista-instalar {
+  border-width: medium;
+  border-style: solid;
+  border-color: #00f;
+  
+  width:95%;
+  height:auto;
+  border:2px solid black;
+  padding:10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
 }
 </style>
