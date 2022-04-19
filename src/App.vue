@@ -1,20 +1,27 @@
 <template>
   <div id="app">
-    <ListaInstalar id = "lista-instalar"></ListaInstalar>
-    <ListaComponents id = "lista-components"></ListaComponents>
+    <!-- <ListaInstalar id = "lista-instalar"></ListaInstalar>
+    <ListaComponents id = "lista-components"></ListaComponents> -->
+    <button @click="count++">Click </button>
+    {{ count }}
   </div>
 </template>
 
 <script>
-import ListaComponents from './ListaComponents.vue';
-import ListaInstalar from './ListaInstalar.vue';
+import ListaComponents from './components/ListaComponents.vue';
+import ListaInstalar from './components/ListaInstalar.vue';
 window.Vue = require('vue');
 export default {
   name: 'App',
   components: {
     ListaComponents,
     ListaInstalar
-}
+  },
+  data() {
+    return {
+      count: 0
+    }
+  }
 }
 </script>
 
