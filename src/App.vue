@@ -2,8 +2,9 @@
   <div id="app">
     <!-- <ListaInstalar id = "lista-instalar"></ListaInstalar>
     <ListaComponents id = "lista-components"></ListaComponents> -->
-    <button @click="count++">Click </button>
+    <button @click="count.x++">Click </button>
     {{ count }}
+    {{ y }}
   </div>
 </template>
 
@@ -19,8 +20,15 @@ export default {
   },
   data() {
     return {
-      count: 0
+      count: {
+        x: 0,
+      },
     }
+  },
+  mounted() {
+    // console.log(this)
+    this.$set(this.count, 'y', 1);
+    this.count = {...this.count, ...{a: 2, b: 3}};
   }
 }
 </script>
