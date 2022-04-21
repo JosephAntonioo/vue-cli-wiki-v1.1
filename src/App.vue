@@ -1,23 +1,23 @@
 <template>
   <div id="app">
     <!-- <ListaInstalar id = "lista-instalar"></ListaInstalar>
-    <ListaComponents id = "lista-components"></ListaComponents> -->
-    <button @click="count.x++">Click </button>
-    {{ count }}
-    {{ y }}
+    <ListaComponents id = "lista-components"></ListaComponents> 
+    <DataEMounted id = "data-e-mounted"></DataEMounted> -->
   </div>
 </template>
 
 <script>
 import ListaComponents from './components/ListaComponents.vue';
 import ListaInstalar from './components/ListaInstalar.vue';
+import DataEMounted from './components/DataEMounted.vue';
 window.Vue = require('vue');
 export default {
   name: 'App',
   components: {
     ListaComponents,
-    ListaInstalar
-  },
+    ListaInstalar,
+    DataEMounted
+},
   data() {
     return {
       count: {
@@ -62,6 +62,23 @@ export default {
 }
 
 #lista-instalar {
+  border-width: medium;
+  border-style: solid;
+  border-color: #00f;
+  
+  width:95%;
+  height:auto;
+  border:2px solid black;
+  padding:10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
+}
+
+#data-e-mounted {
   border-width: medium;
   border-style: solid;
   border-color: #00f;
